@@ -128,12 +128,7 @@
 														selector : '#id_material',
 														validators : {
 															notEmpty : {
-																message : "El apellido es obligatorio"
-															},
-															stringLength : {
-																message : "El apellido es de 2 a 20 caracteres",
-																min : 2,
-																max : 20
+																message : "El material es obligatorio"
 															}
 														}
 													},
