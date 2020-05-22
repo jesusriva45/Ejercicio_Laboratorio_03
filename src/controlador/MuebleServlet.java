@@ -36,6 +36,7 @@ public class MuebleServlet extends HttpServlet {
 			String nom = request.getParameter("nombre");
 			String mat = request.getParameter("material");
 			String desc = request.getParameter("descripcion");
+			int stock = Integer.parseInt(request.getParameter("stock"));
 			double pre = Double.parseDouble(request.getParameter("precio"));
 
 			// 2 Se crea el objeto Mueble
@@ -43,6 +44,7 @@ public class MuebleServlet extends HttpServlet {
 			obj.setNombre(nom);
 			obj.setMaterial(mat);
 			obj.setDescrip(desc);
+			obj.setStock(stock);
 			obj.setPrecio(pre);
 
 			MuebleModel m = new MuebleModel();

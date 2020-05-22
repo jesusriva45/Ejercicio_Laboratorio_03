@@ -67,11 +67,19 @@
 						name="descripcion" rows="3" cols=""></textarea>
 				</div>
 
-				<div class="form-group col-md-5 mb-3">
+			<div class="form-group col-md-5 mb-3">
+					<label for="id_stock">Stock</label> <input type="text"
+						class="form-control" id="id_stock" name="stock"
+						placeholder="0">
+				</div><br>
+			
+				<div class="form-group col-md-5 mb-3 ml-auto">
 					<label for="id_precio">Precio</label> <input type="text"
 						class="form-control" id="id_precio" name="precio"
 						placeholder="Precio">
 				</div>
+				
+				
 
 			</div>
 
@@ -153,12 +161,29 @@
 																message : 'Formato incorrecto, solo enteros o decimales'
 															},
 															between : {
-																min : 50.0,
-																max : 9999999999.9,
+																min : 50,
+																max : 9999999,
 																message : 'Debe ingresar precio mayor o igual a 50'
 															}
 														}
 													},
+													stock : {
+														selector : '#id_stock',
+														validators : {
+															notEmpty : {
+																message : "El stock es obligatorio"
+															},
+															regexp : {
+																regexp : /^[0]?[+]?[0-9]\d*$/,
+																message : 'Formato incorrecto, solo enteros'
+															},
+															between : {
+																min : 1,
+																max : 99999,
+																message : 'Stock debe ser mayor o igual a 1'
+															}
+														}
+													}
 												}
 
 											});

@@ -11,7 +11,8 @@ public class Mueble {
 	private int idmueble;
 	private String nombre;
 	private String material;	
-	private String descrip;	
+	private String descrip;
+	private int stock; 
 	private double precio; 
 	
 }

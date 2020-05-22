@@ -16,12 +16,13 @@ public class MuebleModel {
 		try {
 			
 			conn = MySqlDBConexion.getConexion();
-			String sql ="insert into mueble values(null,?,?,?,?)";
+			String sql ="insert into mueble values(null,?,?,?,?,?)";
 			pstm = conn.prepareStatement(sql);
 			pstm.setString(1, obj.getNombre());			
 			pstm.setString(2, obj.getMaterial());
 			pstm.setString(3, obj.getDescrip());
-			pstm.setDouble(4, obj.getPrecio());
+			pstm.setInt(4, obj.getStock());
+			pstm.setDouble(5, obj.getPrecio());
 			salida = pstm.executeUpdate();
 			
 		} catch (Exception e) {
